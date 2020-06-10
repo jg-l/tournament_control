@@ -9,8 +9,8 @@ class TournamentScreen extends StatefulWidget {
 }
 
 class _TournamentScreenState extends State<TournamentScreen> {
-  int _currentIndex = 0;
-  PageController _pageController = PageController();
+  int _currentIndex = 2;
+  PageController _pageController = PageController(initialPage: 2);
 
   final List<String> _navigation = [
     "Round 1",
