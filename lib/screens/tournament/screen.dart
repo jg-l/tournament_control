@@ -4,6 +4,7 @@ import 'package:tournament_control/data/2019_nhl_playoffs.dart';
 import 'package:tournament_control/screens/tournament/widgets/rounds_list.dart';
 
 class TournamentScreen extends StatefulWidget {
+  static const routeName = "/";
   @override
   _TournamentScreenState createState() => _TournamentScreenState();
 }
