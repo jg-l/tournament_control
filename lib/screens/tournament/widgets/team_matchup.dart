@@ -38,9 +38,9 @@ class TeamMatchup extends StatelessWidget {
             decoration: BoxDecoration(
               boxShadow: [
                 BoxShadow(
-                  color: Colors.grey.withOpacity(0.05),
-                  spreadRadius: 1,
-                  blurRadius: 8,
+                  color: Colors.grey.withOpacity(0.15),
+                  spreadRadius: 2,
+                  blurRadius: 9,
                   offset: Offset(0, 0),
                 ),
               ],

@@ -23,39 +23,43 @@ class _TournamentScreenState extends State<TournamentScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: Color(0xFFf5f5f5),
-        appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          centerTitle: true,
-          title: Image.asset(nhlLogo, width: 36),
-        ),
-        bottomNavigationBar: BottomAppBar(
-          color: Colors.black,
-          child: Padding(
-            padding: const EdgeInsets.all(24.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: _buildNavigation(),
+    return Container(
+      color: Color(0xFFf5f5f5),
+      child: SafeArea(
+        bottom: false,
+        child: Scaffold(
+          backgroundColor: Color(0xFFf5f5f5),
+          appBar: AppBar(
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            centerTitle: true,
+            title: Image.asset(nhlLogo, width: 36),
+          ),
+          bottomNavigationBar: BottomAppBar(
+            color: Colors.black,
+            child: Padding(
+              padding: const EdgeInsets.all(24.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: _buildNavigation(),
+              ),
             ),
           ),
-        ),
-        body: PageView(
-          controller: _pageController,
-          onPageChanged: (page) {
-            setState(() {
-              _currentIndex = page;
-            });
-          },
-          children: <Widget>[
-            RoundsList(round: stanleyCup2019.first),
-            RoundsList(round: stanleyCup2019[1]),
-            RoundsList(round: stanleyCup2019[2]),
-            RoundsList(round: stanleyCup2019[3]),
-          ],
+          body: PageView(
+            controller: _pageController,
+            onPageChanged: (page) {
+              setState(() {
+                _currentIndex = page;
+              });
+            },
+            children: <Widget>[
+              RoundsList(round: stanleyCup2019.first),
+              RoundsList(round: stanleyCup2019[1]),
+              RoundsList(round: stanleyCup2019[2]),
+              RoundsList(round: stanleyCup2019[3]),
+            ],
+          ),
         ),
       ),
     );
